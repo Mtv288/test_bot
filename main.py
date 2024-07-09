@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import os
 from handlers import command
 import logging
+from keyboard import reply_keyboard, inline_keyboard
 
 load_dotenv()
 bot = Bot(os.getenv('TOKEN'))
