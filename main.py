@@ -1,12 +1,14 @@
 from aiogram import Bot, Dispatcher
 import asyncio
 from dotenv import load_dotenv
+import os
 
-bot = ('')
+load_dotenv()
+bot = Bot(os.getenv('TOKKEN'))
 
 
 async def srart():
-    dp = Dispatcher
+    dp = Dispatcher()
     await dp.start_polling(bot)
 
 
