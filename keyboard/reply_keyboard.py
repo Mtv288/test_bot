@@ -2,11 +2,15 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 
 def main_kb():
-    main = ReplyKeyboardMarkup(
+    address = ReplyKeyboardMarkup(
         keyboard=[
             [
                 KeyboardButton(text='Адрес')
+            ], [
+                KeyboardButton(text='Картинка')
             ]
         ], resize_keyboard=True
     )
-    return main
+    return address
+
+
