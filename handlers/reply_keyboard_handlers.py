@@ -1,5 +1,5 @@
-from aiogram import F, Router, types
-from aiogram.types import Message, FSInputFile, InputFile, InputMediaPhoto
+from aiogram import F, Router
+from aiogram.types import Message, FSInputFile
 from main import bot
 
 router = Router()
