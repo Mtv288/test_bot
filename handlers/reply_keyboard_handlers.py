@@ -16,5 +16,6 @@ async def address(message: Message):
 
 @router.message(F.text == 'Картинка')
 async def picture(message: Message):
+    await message.answer('Подождите идет загрузка фото')
     await bot.send_photo(chat_id=message.chat.id, photo=photo_file)
 
