@@ -1,6 +1,7 @@
 from aiogram import F, Router
 from aiogram.types import Message, FSInputFile
 from main import bot
+import datetime
 
 router = Router()
 photo_file = FSInputFile('photo.jpg')
@@ -19,3 +20,11 @@ async def picture(message: Message):
     await message.answer('Подождите идет загрузка фото')
     await bot.send_photo(chat_id=message.chat.id, photo=photo_file)
 
+
+@router.message()
+async def data_info(message: Message):
+    try:
+        datetime.datetime.strptime(message.text, '%d.%m.%Y')
+        await message.answer('Формат даты верен')
+    except ValueError:
+        await message.answer('Формат даты не верен')
